@@ -15,7 +15,7 @@ exports.seed = function(knex) {
       description: "Testing 123 Seed Data",
       price: 30,
       location: "South Africa",
-      category: "clothing",
+      category: "Clothing",
       user_id: 2
     },
     {

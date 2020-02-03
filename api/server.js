@@ -13,7 +13,7 @@ server.use(cors());
 configureRoutes(server);
 
 server.get("/", (req, res) => {
-  res.send("Welcome to the African Marketplace API 😀");
+  res.send("The African Marketplace API is working ");
 });
 
 module.exports = server;
