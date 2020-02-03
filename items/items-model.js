@@ -1,4 +1,4 @@
-const db = require("../database/dbConfig.js");
+const db = require("../data/dbConfig.js");
 
 module.exports = {
   getItems,
@@ -19,9 +19,7 @@ function addItem(item) {
 }
 
 function getItemsByCategory(category) {
-  return db("items")
-    .where({ category })
-    
+  return db("items").where({ category });
 }
 
 function getItemsById(id) {
@@ -43,11 +41,11 @@ function deleteItem(id) {
 }
 
 function find(category) {
-  const query = db('items').select('id', 'name', 'category');
-  if(category === null){
-    return query
+  const query = db("items").select("id", "name", "category");
+  if (category === null) {
+    return query;
   } else if (category) {
     query.where({ category });
   }
   return query;
-} 
+}
